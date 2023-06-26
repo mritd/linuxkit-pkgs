@@ -1,0 +1,11 @@
+image: losetup
+config:
+  binds:
+    - /dev:/dev
+    - /var:/var
+  devices:
+    # all block devices
+    - path: all
+      type: b
+  capabilities:
+    - CAP_SYS_ADMIN
